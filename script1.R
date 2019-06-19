@@ -2,8 +2,7 @@ library(countrycode)
 library(tidyverse)
 library(magrittr)
 
-letter_list <- letters[1:26] # for single strings you can use which(letters==(substr("albania",1,1)))
-etc but got errors when tried to incorporate into transform()
+letter_list <- letters[1:26] # for single strings you can use which(letters==(substr("albania",1,1))) etc but got errors when tried to incorporate into transform()
 
 countries <- casefold(countrycode_data$country.name.en, upper = FALSE) %>%
   as.tibble() %>%
